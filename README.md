@@ -14,3 +14,4 @@ Guia de estudo é principalmente o livro, Rede Neurais Artificiais- Ivan Nunes, 
 * Arquitetura FeedForward
 * Cada entrada será multiplicada por seu peso correspondente, depois ocorre o somatório e aplicação de uma função para apresentar o resultado final
 * Para treinar a rede, os novos pesos devem ser iguais há: peso antigo + (taxa de aprendizagem x entrada correspondete ao peso x diferença do  valor esperado ao valor obtido)
+* Bias (limiar de ativação) - em todo amostra a primeira entrada vale -1, também é criado um peso aleatorio para essa entrada.
