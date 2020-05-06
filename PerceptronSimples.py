@@ -1,3 +1,4 @@
+import random
 entradas = [[-1, 0.1, 0.4, 0.7],
             [-1, 0.3, 0.7, 0.2],
             [-1, 0.6, 0.9, 0.8],
@@ -5,20 +6,23 @@ entradas = [[-1, 0.1, 0.4, 0.7],
 
 respostas = [1, -1, -1, 1]
 epocas = 0
-taxa = 0.085
+taxa = 0.4
 erro = False
-pesos = [0.2, 0.3, 0.4, 0.5]
+pesos = [random.random(), random.random(), random.random(), random.random()]
+pesosIniciais = pesos.copy()
+numeroEntradas = 4
+numeroAmostras = 4
 
 
 def novoPeso(y, u, x):   # y resposta esperada, u resposta calculada, x entrada
-    for i in range(0, 4):
+    for i in range(0, numeroEntradas):
         pesos[i] = pesos[i] + (taxa * (y - u) * x[i])
 
 
 def multiplica(ent):
     u = []
-    for x in range(0, 4):
-        u.append(ent[x] * pesos[x])
+    for x in range(0, numeroEntradas):
+        u.append(ent[x] * pesos[x] - pesos[x])   # com dúvida sobre - pesos[0] e ou  - pesos[x]
     return u
 
 
@@ -42,7 +46,7 @@ def soma(lista):
 # treinamento
 while True:  # emulate do while
     erro = False     # so para com a resposta 100% certa, só é possível em problemas lineares
-    for f in range(0, 4):   # numero de casos de testes e nao de entradas
+    for f in range(0, numeroAmostras):   # numero de casos de testes e nao de entradas
         saida = (soma(entradas[f]))  # uma variavel única pois da trabalho resetar a lista a cada treinamento
         if saida != respostas[f]:
             erro = True
@@ -55,12 +59,13 @@ while True:  # emulate do while
 
 # depois da rede estar treinada - pronta
 saidas = []
+
 for entrada in entradas:
     saidas.append(soma(entrada))   # calcula as entradas uma última vez com os pesos corretos
 
 
 print(f"Saida: {saidas}")
-print(f"Pesos Iniciais: {[0.2, 0.3, 0.4, 0.5]}")
+print(f"Pesos Iniciais: {pesosIniciais}")
 print(f"Pesos Finais: {pesos}")
 print(f"Taxa de Aprendizado: {taxa} ")
 print(f"Epocas: {epocas}")
