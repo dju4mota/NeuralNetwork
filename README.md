@@ -1,5 +1,5 @@
 # NeuralNetwork
-### Estudos na área de Redes Reurais utilizando Python 3
+### Estudos na área de Redes Neurais utilizando Python 3
 
 
 Guia de estudo é principalmente o livro, Rede Neurais Artificiais- Ivan Nunes, Danilo Hernane e Rogério Andrade
