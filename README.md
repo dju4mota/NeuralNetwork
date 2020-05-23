@@ -8,8 +8,8 @@ Guia de estudo é principalmente o livro, Rede Neurais Artificiais- Ivan Nunes, 
 
 <hr>
 
-### Resumo do Resumo
-#### Perceptron Simples (uma camada) :
+## Resumo do Resumo
+### Perceptron Simples (uma camada) :
 * Classificação de problemas Linearmente separáveis
 * Arquitetura FeedForward
 * Cada entrada será multiplicada por seu peso correspondente, depois ocorre o somatório e aplicação de uma função para apresentar o resultado final
@@ -17,12 +17,12 @@ Guia de estudo é principalmente o livro, Rede Neurais Artificiais- Ivan Nunes, 
 * Bias (limiar de ativação) - em todo amostra a primeira entrada vale -1, também é criado um peso aleatorio para essa entrada.
 <hr>
 
-#### Adaline 
+### Adaline 
 * Parecida com a Rede Perceptron Simples, porém calcula o erro de uma forma muito diferente, o que possibilita solucionar problemas não linearmente separáveis
 * O gráfico do erro passa a ser uma parábola com concavidade voltada para cima e o objetivo da rede é se aproximar o máximo do menor ponto. (Xv,Yv) - idealmente
 * O valor da taxa de aprendizado deve ser escolhido cuidadosamente para não resultar em um mínimo local
 * O desempenho pode ser melhorado com uma normalização dos dados de entrada
-##### Erro 
+#### Erro 
 * Erro médio absoluto ao quadrado (Penaliza muito mais erros distantes da média)
 * Erro médio absoluto = Somatório de | média - valor atual |
 * Erro médio absoluto em uma rede = Somatório de | valor esperado - valor calculado |
