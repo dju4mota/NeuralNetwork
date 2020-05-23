@@ -22,7 +22,7 @@ Guia de estudo é principalmente o livro, Rede Neurais Artificiais- Ivan Nunes, 
 * O gráfico do erro passa a ser uma parábola com concavidade voltada para cima e o objetivo da rede é se aproximar o máximo do menor ponto. (Xv,Yv) - idealmente
 * O valor da taxa de aprendizado deve ser escolhido cuidadosamente para não resultar em um mínimo local
 * O desempenho pode ser melhorado com uma normalização dos dados de entrada
-#### Erro 
+#### Erro ( Regra Delta )
 * Erro médio absoluto ao quadrado (Penaliza muito mais erros distantes da média)
 * Erro médio absoluto = Somatório de | média - valor atual |
 * Erro médio absoluto em uma rede = Somatório de | valor esperado - valor calculado |
