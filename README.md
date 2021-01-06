@@ -8,7 +8,7 @@ Guia de estudo é principalmente o livro, Rede Neurais Artificiais- Ivan Nunes, 
 
 <hr>
 
-## Resumo do Resumo
+## Resumo
 ### Perceptron Simples (uma camada) :
 * Classificação de problemas Linearmente separáveis
 * Arquitetura FeedForward
